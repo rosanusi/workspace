@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './../css/main.css';
+import deleteIcon from './../images/close.svg';
+import openIcon from './../images/open.svg';
 
 
 
 class WorkspaceList extends Component {
 
 
-    openWorkspaceUrls(e, workspace){
+    GotoWorkspaceUrls(e, workspace){
         // console.log(e.target);
         // console.log(workspace);
 
@@ -23,9 +25,20 @@ class WorkspaceList extends Component {
 
     }
 
-    editWorkspaceUrls(e, workspace){
+    setUrls(e, workspace){
+        console.log(e.target);
+        console.log(workspace);
+        let urls = workspace.urls; 
+        console.log(urls);
+
+        this.props.handleSetUrls(urls);
+    }
+
+
+    deleteWorkspaceUrls(e, workspace){
         // console.log(e.target);
         // console.log(workspace);
+        e.stopPropagation();
         console.log("working");
     }
 
@@ -38,23 +51,26 @@ class WorkspaceList extends Component {
         <li  
             className="ws-list__space"
             key={workspace.key}
+            onClick={((e) => this.setUrls(e, workspace))}
         >
             <span className="ws-list__label">{workspace.label}</span>
-            <div className="ws-list__actions">
-                <span
+            <span className="ws-list__actions">
+                <button type="button"
                     className="ws-list__url"
-                    onClick={((e) => this.openWorkspaceUrls(e, workspace))}
+                    onClick={((e) => this.GotoWorkspaceUrls(e, workspace))}
                 >
-                    open workspace
-                </span>
-                <span
-                    className="ws-list__edit"
-                    onClick={((e) => this.editWorkspaceUrls(e, workspace))}
+                    <img src={openIcon} alt="" />
+                </button>
+                <button type="button"
+                    className="ws-list__delete"
+                    onClick={((e) => this.deleteWorkspaceUrls(e, workspace))}
                 >
-                 edit workspace
-                </span>
+                 
+                 <img src={deleteIcon} alt="" />
 
-            </div>
+                </button>
+
+            </span>
         </li>
     );
     
