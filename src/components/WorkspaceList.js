@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './../css/main.css';
+import "tachyons";
+
 import deleteIcon from './../images/close.svg';
 import openIcon from './../images/open.svg';
 
@@ -26,11 +28,11 @@ class WorkspaceList extends Component {
     }
 
     setUrls(e, workspace){
-        console.log(e.target);
-        console.log(workspace);
-        let urls = workspace.urls; 
-        console.log(urls);
+        // console.log(e.target);
+        // console.log(workspace);
 
+
+        let urls = workspace.urls; 
         this.props.handleSetUrls(urls);
     }
 
@@ -49,7 +51,7 @@ class WorkspaceList extends Component {
 
     const workspaces = workspaceList.map((workspace) =>
         <li  
-            className="ws-list__space"
+            className="ws-list__space outline w-25 h4-ns pa2 mr2"
             key={workspace.key}
             onClick={((e) => this.setUrls(e, workspace))}
         >
@@ -77,7 +79,7 @@ class WorkspaceList extends Component {
     
     
     return (
-        <ul className="ws-list">
+        <ul className="ws-list flex flex-wrap">
             {workspaces}
         </ul>
     );

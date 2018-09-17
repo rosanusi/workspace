@@ -64,6 +64,178 @@ class Workspaces extends Component {
             dateCreated : "0945738573875"
             }, 
             {
+                label : "office workspace",
+                key: "35743",
+                urls : [
+                    {
+                    domain: "gmail",
+                    address: "http://www.booking.gmail.com"
+                    },
+                    {
+                    domain: "adium",
+                    address: "http://www.booking.adium.com"
+                    },
+                    {
+                    domain: "something else",
+                    address: "http://www.something.com"
+                    },
+                    {
+                    domain: "adium",
+                    address: "http://www.booking.adium.com"
+                    },
+                    {
+                    domain: "something else",
+                    address: "http://www.something.com"
+                    },
+                    {
+                    domain: "something else",
+                    address: "http://www.something.com"
+                    },
+                    {
+                    domain: "something else",
+                    address: "http://www.something.com"
+                    },
+                    {
+                    domain: "adium",
+                    address: "http://www.booking.adium.com"
+                    },
+                    {
+                    domain: "something else",
+                    address: "http://www.something.com"
+                    }
+                ],
+                dateCreated : "0945738573875"
+                }, 
+                {
+                    label : "office workspace",
+                    key: "35743",
+                    urls : [
+                        {
+                        domain: "gmail",
+                        address: "http://www.booking.gmail.com"
+                        },
+                        {
+                        domain: "adium",
+                        address: "http://www.booking.adium.com"
+                        },
+                        {
+                        domain: "something else",
+                        address: "http://www.something.com"
+                        },
+                        {
+                        domain: "adium",
+                        address: "http://www.booking.adium.com"
+                        },
+                        {
+                        domain: "something else",
+                        address: "http://www.something.com"
+                        },
+                        {
+                        domain: "something else",
+                        address: "http://www.something.com"
+                        },
+                        {
+                        domain: "something else",
+                        address: "http://www.something.com"
+                        },
+                        {
+                        domain: "adium",
+                        address: "http://www.booking.adium.com"
+                        },
+                        {
+                        domain: "something else",
+                        address: "http://www.something.com"
+                        }
+                    ],
+                    dateCreated : "0945738573875"
+                    }, 
+                    {
+                        label : "office workspace",
+                        key: "35743",
+                        urls : [
+                            {
+                            domain: "gmail",
+                            address: "http://www.booking.gmail.com"
+                            },
+                            {
+                            domain: "adium",
+                            address: "http://www.booking.adium.com"
+                            },
+                            {
+                            domain: "something else",
+                            address: "http://www.something.com"
+                            },
+                            {
+                            domain: "adium",
+                            address: "http://www.booking.adium.com"
+                            },
+                            {
+                            domain: "something else",
+                            address: "http://www.something.com"
+                            },
+                            {
+                            domain: "something else",
+                            address: "http://www.something.com"
+                            },
+                            {
+                            domain: "something else",
+                            address: "http://www.something.com"
+                            },
+                            {
+                            domain: "adium",
+                            address: "http://www.booking.adium.com"
+                            },
+                            {
+                            domain: "something else",
+                            address: "http://www.something.com"
+                            }
+                        ],
+                        dateCreated : "0945738573875"
+                        }, 
+                        {
+                            label : "office workspace",
+                            key: "35743",
+                            urls : [
+                                {
+                                domain: "gmail",
+                                address: "http://www.booking.gmail.com"
+                                },
+                                {
+                                domain: "adium",
+                                address: "http://www.booking.adium.com"
+                                },
+                                {
+                                domain: "something else",
+                                address: "http://www.something.com"
+                                },
+                                {
+                                domain: "adium",
+                                address: "http://www.booking.adium.com"
+                                },
+                                {
+                                domain: "something else",
+                                address: "http://www.something.com"
+                                },
+                                {
+                                domain: "something else",
+                                address: "http://www.something.com"
+                                },
+                                {
+                                domain: "something else",
+                                address: "http://www.something.com"
+                                },
+                                {
+                                domain: "adium",
+                                address: "http://www.booking.adium.com"
+                                },
+                                {
+                                domain: "something else",
+                                address: "http://www.something.com"
+                                }
+                            ],
+                            dateCreated : "0945738573875"
+                            }, 
+            {
             label : "Homespace",
             key: "5698",
             urls : [
@@ -160,8 +332,8 @@ class Workspaces extends Component {
         );
     } else {
         return (
-            <div className="ws-block">
-                <span className="ws-block__title">Workspaces</span>
+            <div className="mw8 ws-block flex flex-wrap">
+                <h3 className="ws-block__title">Workspaces</h3>
                 <WorkspaceList 
                     workspaceList =  {this.state.workspaceList}
                     handleSetUrls =  {this.handleSetUrls.bind(this)}
@@ -173,9 +345,9 @@ class Workspaces extends Component {
                     >
                     Add new workplace
                 </button>
-                <UrlList 
+                {/* <UrlList 
                     workspaceUrls = {this.state.workspaceUrls}
-                />
+                /> */}
             </div>
         );
     }
